@@ -1,0 +1,31 @@
+Script Name: SEQ-INDP_DEPLETED_Motifs-1.24.20.py
+Author: Eric R Gann
+Date: 1.24.2020
+
+Description: This script takes multiple inputs to separate the genome into fragments in between sites of methylation. 
+It uses the gene coding table from NCBI to determine whether the fragment has a coding sequence in it or is part of a coding sequence. 
+The file returns rows where each is the new fragment with columns that tell you the start and end position of the fragment, its length, 
+as well as the number of coding sequences that begin inside / out side the contig. Also, genes surrounding the fragment or fall completely 
+within the contig are stated. The total number of coding sequences influenced by the fragment is recorded. 
+All input files must be in the same folder you are executing the script out of, or the path must be included in the file name. 
+For python 2.7 you must submit all answers surrounded by quotations.
+
+Input required: There are four inputs required from the user. They are: 
+
+1. 'What is the file name with methylation motif and position?'
+This file tells the position of each methylation site. Each position is on a new line and has the following format: 
+chrX start_position end_position length
+(Input Ex: CATG_PBCV1.txt or "CATG_PBCV1.txt")
+
+2. 'What is the name of the genome file?'
+This is the sequence of the genome in a .fasta format that can be downloaded from NCBI.
+(Input Ex: PBCV1.fasta or "PBCV1.fasta")
+
+3. 'What is the name of the gene annotation table from NCBI?'
+These are the positions of all coding sequences in a gene annotation table from NCBI.
+(Input Ex: PBCV1_gene_table.txt or "PBCV1_gene_table.txt") 
+
+4. 'What is the name of the output file?'
+This is the output file. This file saves as tab delimited, so it should be saved as a .txt.
+(Input Ex: result.txt or "result.txt") *Be careful about naming an existing file; it will erase this and replace it with your new output file with no warning.
+

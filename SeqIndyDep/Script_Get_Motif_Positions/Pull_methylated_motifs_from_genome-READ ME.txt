@@ -1,0 +1,22 @@
+Name: Pull_methylated_motifs_from_genome.py
+Author: Eric R Gann
+Date: 1.24.2020
+
+Description: This script pulls out the methylated position from a user specified motif in a genome and records all of those positions in an output file. 
+All input files must be in the same folder you are executing the script out of, or th path must be included in the file name. 
+For python 2.7 you must submit all answers surrounded by quotations.
+
+User inputs:
+1. 'What is the genome file?'
+This is the genome in a .fasta file that can be downloaded from NCBI. (Input Ex: PBCV1.fasta or "PBCV1.fasta")
+
+2. 'What is the motif you are searching for?'
+Enter the motif you are looking for. (Input Ex: GATC or "GATC")
+
+3. 'What position is methylated? (the first position is 0 not 1!)'
+This is the position in the motif that is methylated. The first position in python is 0 not 1. As an example, 
+for GATC, the A is methylated, the user would specify by entering: 1 or "1"
+
+4. 'What is your output file?'
+This is the output file. The output is each position on a new line. This should be a .txt file. (Input Ex: GATC_results.txt or "GATC_results.txt")
+*Be careful about naming an existing file; it will erase this and replace it with your new output file with no warning.

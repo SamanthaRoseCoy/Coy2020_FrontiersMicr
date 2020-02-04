@@ -1,0 +1,38 @@
+Script Name: 1.24.2020.py
+Author: Eric R Gann
+Date: 1.24.2020
+
+Description: This script takes a genome and uses regular expressions to find motifs from a user defined input 
+file and reports the number and their position in the genome. The window size is defined by the user, and the window will 
+slide by the length of the motif to do a sliding window analysis. The output of this script is a tab 
+delimited file where each line gives the sequence of the fragment, the number of the fragment, the 
+coordinates of the fragment, the number of motifs per fragment, the motif positions in the genome 
+within that fragment, (this is repeated for each motif), and then the total number of motifs detected 
+and their position. All input files must be in the same folder you are executing the script out of, or
+the path must be included in the file name. 
+Suggestion: I would do each motif individually unless they are the same length.
+For python 2.7 you must submit all answers surrounded by quotations.
+
+Input required: There are four inputs required from the user. They are: 
+
+1. 'What is the name of the input genome fasta file?'
+This is the sequence of the genome in a .fasta file that can be downloaded from NCBI. 
+(Input Ex: PBCV1.fasta or "PBCV1.fasta")
+
+2.  'What size fragment do you want the genome broken into?'
+This is the size of fragment the user wants the genome broken up into. This must be an integer.
+(Input Ex: 278 or "278")
+
+3. 'What is the input motif flie? (one motif per line)'
+This is a .txt file where the motifs of interest are each on a new line and either capitalized or lower case depending on the .fasta file.
+(Input Ex: motif.txt or "motif.txt") 
+
+4. 'What is the length of the motif you are using? (If motifs are different length one must be picked to ensure the same starting position of each fragment for analysis)
+(Input Ex: 4 or "4")
+
+4. 'What is the name of the out file? (save as a .txt)'
+This is the new output file that will be created. The script saves as tab delimited, so the file should be a .txt. 
+(Input Ex: result.txt or "result.txt") *Be careful about naming an existing file; it will erase this and replace it with your new output file with no warning.
+
+Update: two files will actually be produced, one summary file and one with all the redundancies included (a bigger file).
+
